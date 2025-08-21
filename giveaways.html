@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RewardSZN — Giveaways</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html"><span class="mark"><i class="spark"></i></span><span>Reward<span class="gradient-text">SZN</span></span></a>
+        <nav class="nav-links">
+            <a href="/chatgpt/index.html">Home</a>
+            <a href="/chatgpt/deals.html">Deals</a>
+            <a href="/chatgpt/giveaways.html">Giveaways</a>
+            <a href="/chatgpt/pricing.html">Pricing</a>
+        </nav>
+      <button class="mobile-toggle" data-toggle="nav" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" style="min-height:40vh">
+    <div class="backdrop"></div>
+    <div class="container hero-wrap" style="padding:46px 0">
+      <span class="badge">Win Weekly</span>
+      <h1>Giveaways & <span class="gradient-text">Jackpots</span></h1>
+      <p class="lead">Count down to the next draw. See past winners. Read the rules.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <!-- Countdown & Entry Tracker -->
+      <section class="card">
+        <div class="section-head">
+          <h2>Next Draw</h2>
+          <p class="muted">Static layout with optional JS placeholder.</p>
+        </div>
+        <div class="blocks" data-countdown>
+          <div class="block"><small>Days</small><b style="font-size:28px" data-part="d">00</b></div>
+          <div class="block"><small>Hrs</small><b style="font-size:28px" data-part="h">00</b></div>
+          <div class="block"><small>Min</small><b style="font-size:28px" data-part="m">00</b></div>
+          <div class="block"><small>Sec</small><b style="font-size:28px" data-part="s">00</b></div>
+        </div>
+        <div style="margin-top:16px">
+          <div class="entry-bar"><i></i></div>
+          <p class="muted" style="margin-top:8px">Entries filling up fast — secure your spot.</p>
+          <a class="btn-ring btn primary" href="#enter">Enter Giveaway</a>
+        </div>
+      </section>
+
+      <!-- Winners -->
+      <section class="section">
+        <div class="section-head">
+          <h2>Recent Winners</h2>
+          <p class="muted">Hover cards for glow & details.</p>
+        </div>
+        <div class="marquee card">
+          <div class="ticker">
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Priya K.</b></div>
+              <p>Won: $250 Gift Card · #GSN8230</p>
+            </article>
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Leo V.</b></div>
+              <p>Won: Premium Headphones · #GSN8231</p>
+            </article>
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Maya Z.</b></div>
+              <p>Won: VIP Membership · #GSN8232</p>
+            </article>
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Sam T.</b></div>
+              <p>Won: $100 Grocery Boost · #GSN8233</p>
+            </article>
+
+            <!-- duplicate for loop -->
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Priya K.</b></div>
+              <p>Won: $250 Gift Card · #GSN8230</p>
+            </article>
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Leo V.</b></div>
+              <p>Won: Premium Headphones · #GSN8231</p>
+            </article>
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Maya Z.</b></div>
+              <p>Won: VIP Membership · #GSN8232</p>
+            </article>
+            <article class="testi card glow">
+              <div class="row"><span class="avatar"></span><b>Sam T.</b></div>
+              <p>Won: $100 Grocery Boost · #GSN8233</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rules Accordion -->
+      <section id="rules" class="section faq">
+        <div class="section-head">
+          <h2>Giveaway Rules</h2>
+          <p class="muted">Styled with native &lt;details&gt;/&lt;summary&gt; for smooth CSS animation.</p>
+        </div>
+        <details class="card">
+          <summary>Eligibility <span class="arrow">▼</span></summary>
+          <div class="content">Members 18+; one account per person; void where prohibited.</div>
+        </details>
+        <details class="card">
+          <summary>Entries <span class="arrow">▼</span></summary>
+          <div class="content">Entries reset weekly. VIP tiers receive bonus entries.</div>
+        </details>
+        <details class="card">
+          <summary>Winners <span class="arrow">▼</span></summary>
+          <div class="content">Winners are displayed on this page after verification.</div>
+        </details>
+      </section>
+
+      <!-- Replay Previous Draw -->
+      <section class="section" id="enter">
+        <div class="grid" style="grid-template-columns:1fr 1fr">
+          <article class="card glow">
+            <h3>Replay Last Draw</h3>
+            <div style="aspect-ratio:16/9;display:grid;place-items:center;background:rgba(255,255,255,0.06);border:1px solid var(--border);border-radius:16px;margin-top:10px">
+              <button class="btn-ring btn" aria-label="Play video"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7-11-7z" fill="currentColor"/></svg></button>
+            </div>
+          </article>
+          <article class="card glow">
+            <h3>Entry Feed</h3>
+            <div style="display:grid;gap:8px;margin-top:10px;max-height:220px;overflow:auto">
+              <div class="row"><span class="avatar"></span><small>Alex joined · 3m ago</small></div>
+              <div class="row"><span class="avatar"></span><small>Riya joined · 5m ago</small></div>
+              <div class="row"><span class="avatar"></span><small>Ben joined · 8m ago</small></div>
+              <div class="row"><span class="avatar"></span><small>Mya joined · 10m ago</small></div>
+              <div class="row"><span class="avatar"></span><small>Kai joined · 12m ago</small></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="index.html"><span class="mark"><i class="spark"></i></span><span>Reward<span class="gradient-text">SZN</span></span></a></div>
+      <div><b>Links</b><ul style="list-style:none;padding:0;margin-top:8px"><li><a href="deals.html">Deals</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
+      <div><b>Legal</b><ul style="list-style:none;padding:0;margin-top:8px"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+      <div><b>Contact</b><ul style="list-style:none;padding:0;margin-top:8px"><li><a href="#">support@rewardszn.example</a></li></ul></div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script src="main.js" defer></script>
+</body>
+</html>
