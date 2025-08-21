@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Store Tracker — Premium</title>
+<link rel="stylesheet" href="logged_in.css">
+
+
+</head>
+<body>
+<!-- Nav -->
+<div class="nav">
+  <div class="brand">
+    <div class="brand-badge">RZ</div>
+    <div>RewardSZN</div>
+  </div>
+
+  <!-- Hamburger (mobile only) -->
+  <button class="nav-toggle" id="navToggle">☰</button>
+
+  <div class="links" id="navLinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="coupons.html">Coupons</a>
+    <a href="20plusstore-tarcker.html">Store Tracker</a>
+    <a href="logged_in_giveaways.html">Giveaways</a>
+    <a href="settings.html">Settings</a>
+  </div>
+</div>
+
+
+
+<!-- ====== HERO / HEADER ====== -->
+<!-- <section class="hero hero-wrap">
+  <h1>Store Tracker <span class="beta">BETA</span></h1>
+  <div class="hero-sub">RewardSZN AI checks your favourite stores daily for sales — sitewide & selected.</div>
+
+  <div class="search-bar">
+    <input id="search" class="search-input" type="search" placeholder="Search stores or websites… e.g. 'nike' or 'electronics'">
+    <span class="search-icon">⌕</span>
+  </div>
+</section> -->
+
+  <!-- Header / Hero -->
+  <div class="header">
+    <h1>Store Tracker</h1>
+    <p>RewardSZN AI checks your favourite stores daily for sales — sitewide & selected.</p>
+    <div class="meta">
+      <span class="pill">🎯 Curated daily</span>
+      <span class="pill">🤖 Checked by AI</span>
+      <span class="pill">⚡ Instant copy</span>
+    </div>
+  </div>
+  <div class="search-bar">
+    <input id="search" class="search-input" type="search" placeholder="Search stores or websites… e.g. 'nike' or 'electronics'">
+    <span class="search-icon">⌕</span>
+  </div>
+  
+
+<!-- ====== CATEGORY BAR ====== -->
+<div class="category-bar">
+  <div id="categories" class="categories">
+    <button class="pill active" data-filter="all">All</button>
+    <button class="pill" data-filter="scope:Sitewide">Sitewide</button>
+    <button class="pill" data-filter="scope:Selected">Selected</button>
+    <button class="pill" data-filter="Home">Home</button>
+    <button class="pill" data-filter="Travel">Travel</button>
+    <button class="pill" data-filter="Fashion">Fashion</button>
+    <button class="pill" data-filter="Beauty">Beauty</button>
+    <button class="pill" data-filter="Fitness">Fitness</button>
+    <button class="pill" data-filter="Pets">Pets</button>
+    <button class="pill" data-filter="Food & Drink">Food & Drink</button>
+    <button class="pill" data-filter="Electronics">Electronics</button>
+    <button class="pill" data-filter="Automotive">Automotive</button>
+    <button class="pill" data-filter="Books">Books</button>
+    <button class="pill" data-filter="Sports">Sports</button>
+    <button class="pill" data-filter="Kids">Kids</button>
+    <button class="pill" data-filter="Health">Health</button>
+    <button class="pill" data-filter="Jewelry">Jewelry</button>
+    <button class="pill" data-filter="Gaming">Gaming</button>
+  </div>
+</div>
+
+<!-- ====== GRID (20+ realistic stores) ====== -->
+<main id="grid" class="grid">
+  <!-- Travel -->
+  <article class="card" data-category="Travel" data-scope="Selected"
+    data-name="Singapore Airlines" data-url="singaporeair.com"
+    data-badge="Sale" data-off="Selected"
+    data-desc="Book international flights with special discounts."
+    data-img="https://via.placeholder.com/300x300.png?text=Singapore+Air">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=SQ" alt="">
+    <div class="title">Singapore Airlines</div>
+    <div class="domain">singaporeair.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Travel" data-scope="Sitewide"
+    data-name="Emirates" data-url="emirates.com"
+    data-badge="15% Off" data-off="Sitewide"
+    data-desc="Exclusive fares on select routes — limited time."
+    data-img="https://via.placeholder.com/300x300.png?text=Emirates">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=EK" alt="">
+    <div class="title">Emirates</div>
+    <div class="domain">emirates.com</div>
+    <div class="badges">
+      <span class="badge off">15% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Travel" data-scope="Selected"
+    data-name="Booking.com" data-url="booking.com"
+    data-badge="Up to 30%" data-off="Selected"
+    data-desc="Hotel deals & Genius discounts in top destinations."
+    data-img="https://via.placeholder.com/300x300.png?text=Booking">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=BKG" alt="">
+    <div class="title">Booking.com</div>
+    <div class="domain">booking.com</div>
+    <div class="badges">
+      <span class="badge off">Up to 30%</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Fashion -->
+  <article class="card" data-category="Fashion" data-scope="Sitewide"
+    data-name="Nike" data-url="nike.com"
+    data-badge="30% Off" data-off="Sitewide"
+    data-desc="Members save on footwear & apparel."
+    data-img="https://via.placeholder.com/300x300.png?text=Nike">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=NIKE" alt="">
+    <div class="title">Nike</div>
+    <div class="domain">nike.com</div>
+    <div class="badges">
+      <span class="badge off">30% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Fashion" data-scope="Selected"
+    data-name="Zara" data-url="zara.com"
+    data-badge="Sale" data-off="Selected"
+    data-desc="Seasonal sale on selected lines."
+    data-img="https://via.placeholder.com/300x300.png?text=Zara">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=ZARA" alt="">
+    <div class="title">Zara</div>
+    <div class="domain">zara.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Fashion" data-scope="Selected"
+    data-name="UNIQLO" data-url="uniqlo.com"
+    data-badge="Up to 40%" data-off="Selected"
+    data-desc="Limited offers on LifeWear essentials."
+    data-img="https://via.placeholder.com/300x300.png?text=UNIQLO">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=UQ" alt="">
+    <div class="title">UNIQLO</div>
+    <div class="domain">uniqlo.com</div>
+    <div class="badges">
+      <span class="badge off">Up to 40%</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Beauty -->
+  <article class="card" data-category="Beauty" data-scope="Sitewide"
+    data-name="Sephora" data-url="sephora.com"
+    data-badge="20% Off" data-off="Sitewide"
+    data-desc="Beauty Insider event—save on top brands."
+    data-img="https://via.placeholder.com/300x300.png?text=Sephora">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=SE" alt="">
+    <div class="title">Sephora</div>
+    <div class="domain">sephora.com</div>
+    <div class="badges">
+      <span class="badge off">20% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Beauty" data-scope="Selected"
+    data-name="Ulta Beauty" data-url="ulta.com"
+    data-badge="Sale" data-off="Selected"
+    data-desc="Deals on skincare & haircare favourites."
+    data-img="https://via.placeholder.com/300x300.png?text=Ulta">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=ULTA" alt="">
+    <div class="title">Ulta Beauty</div>
+    <div class="domain">ulta.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Fitness / Sports -->
+  <article class="card" data-category="Fitness" data-scope="Sitewide"
+    data-name="Lululemon" data-url="shop.lululemon.com"
+    data-badge="We Made Too Much" data-off="Selected"
+    data-desc="Weekly drops on premium activewear."
+    data-img="https://via.placeholder.com/300x300.png?text=Lululemon">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=LL" alt="">
+    <div class="title">Lululemon</div>
+    <div class="domain">shop.lululemon.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Sports" data-scope="Sitewide"
+    data-name="Adidas" data-url="adidas.com"
+    data-badge="30% Off" data-off="Sitewide"
+    data-desc="Score on sneakers & training gear."
+    data-img="https://via.placeholder.com/300x300.png?text=Adidas">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=ADIDAS" alt="">
+    <div class="title">Adidas</div>
+    <div class="domain">adidas.com</div>
+    <div class="badges">
+      <span class="badge off">30% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Fitness" data-scope="Selected"
+    data-name="Decathlon" data-url="decathlon.com"
+    data-badge="Up to 40%" data-off="Selected"
+    data-desc="Category deals across sports equipment."
+    data-img="https://via.placeholder.com/300x300.png?text=Decathlon">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=DEC" alt="">
+    <div class="title">Decathlon</div>
+    <div class="domain">decathlon.com</div>
+    <div class="badges">
+      <span class="badge off">Up to 40%</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Home -->
+  <article class="card" data-category="Home" data-scope="Selected"
+    data-name="IKEA" data-url="ikea.com"
+    data-badge="Sale" data-off="Selected"
+    data-desc="Price drops on furniture & storage."
+    data-img="https://via.placeholder.com/300x300.png?text=IKEA">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=IKEA" alt="">
+    <div class="title">IKEA</div>
+    <div class="domain">ikea.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Home" data-scope="Sitewide"
+    data-name="Wayfair" data-url="wayfair.com"
+    data-badge="Up to 50%" data-off="Sitewide"
+    data-desc="Home event — furniture, rugs, decor."
+    data-img="https://via.placeholder.com/300x300.png?text=Wayfair">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=WAY" alt="">
+    <div class="title">Wayfair</div>
+    <div class="domain">wayfair.com</div>
+    <div class="badges">
+      <span class="badge off">Up to 50%</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <!-- Pets -->
+  <article class="card" data-category="Pets" data-scope="Sitewide"
+    data-name="Chewy" data-url="chewy.com"
+    data-badge="20% Off" data-off="Sitewide"
+    data-desc="Autoship & save on pet essentials."
+    data-img="https://via.placeholder.com/300x300.png?text=Chewy">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=CHWY" alt="">
+    <div class="title">Chewy</div>
+    <div class="domain">chewy.com</div>
+    <div class="badges">
+      <span class="badge off">20% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Pets" data-scope="Selected"
+    data-name="Petco" data-url="petco.com"
+    data-badge="Sale" data-off="Selected"
+    data-desc="Food & treats deals for dogs & cats."
+    data-img="https://via.placeholder.com/300x300.png?text=Petco">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=PETCO" alt="">
+    <div class="title">Petco</div>
+    <div class="domain">petco.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Food & Drink -->
+  <article class="card" data-category="Food & Drink" data-scope="Selected"
+    data-name="Starbucks" data-url="starbucks.com"
+    data-badge="BOGO" data-off="Selected"
+    data-desc="Happy Hour: buy one, get one drinks."
+    data-img="https://via.placeholder.com/300x300.png?text=Starbucks">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=SBX" alt="">
+    <div class="title">Starbucks</div>
+    <div class="domain">starbucks.com</div>
+    <div class="badges">
+      <span class="badge sale">BOGO</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Food & Drink" data-scope="Sitewide"
+    data-name="Domino's" data-url="dominos.com"
+    data-badge="50% Off" data-off="Sitewide"
+    data-desc="Half off pizzas week — online only."
+    data-img="https://via.placeholder.com/300x300.png?text=Dominos">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=DOM" alt="">
+    <div class="title">Domino's</div>
+    <div class="domain">dominos.com</div>
+    <div class="badges">
+      <span class="badge off">50% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <!-- Electronics -->
+  <article class="card" data-category="Electronics" data-scope="Selected"
+    data-name="Apple" data-url="apple.com"
+    data-badge="Education Offers" data-off="Selected"
+    data-desc="Back to School — save on Mac & iPad."
+    data-img="https://via.placeholder.com/300x300.png?text=Apple">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=" alt="">
+    <div class="title">Apple</div>
+    <div class="domain">apple.com</div>
+    <div class="badges">
+      <span class="badge sale">Offer</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Electronics" data-scope="Sitewide"
+    data-name="Best Buy" data-url="bestbuy.com"
+    data-badge="Up to 40%" data-off="Sitewide"
+    data-desc="Deal of the Day + outlet savings."
+    data-img="https://via.placeholder.com/300x300.png?text=Best+Buy">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=BBY" alt="">
+    <div class="title">Best Buy</div>
+    <div class="domain">bestbuy.com</div>
+    <div class="badges">
+      <span class="badge off">Up to 40%</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Electronics" data-scope="Selected"
+    data-name="Samsung" data-url="samsung.com"
+    data-badge="Trade-in Bonus" data-off="Selected"
+    data-desc="Boosted trade-in on Galaxy & TVs."
+    data-img="https://via.placeholder.com/300x300.png?text=Samsung">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=SAM" alt="">
+    <div class="title">Samsung</div>
+    <div class="domain">samsung.com</div>
+    <div class="badges">
+      <span class="badge sale">Bonus</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Automotive -->
+  <article class="card" data-category="Automotive" data-scope="Sitewide"
+    data-name="AutoZone" data-url="autozone.com"
+    data-badge="20% Off" data-off="Sitewide"
+    data-desc="Parts & accessories — online only code."
+    data-img="https://via.placeholder.com/300x300.png?text=AutoZone">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=AZ" alt="">
+    <div class="title">AutoZone</div>
+    <div class="domain">autozone.com</div>
+    <div class="badges">
+      <span class="badge off">20% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Automotive" data-scope="Selected"
+    data-name="Tire Rack" data-url="tirerack.com"
+    data-badge="Rebates" data-off="Selected"
+    data-desc="Brand rebates on tires & wheels."
+    data-img="https://via.placeholder.com/300x300.png?text=Tire+Rack">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=TR" alt="">
+    <div class="title">Tire Rack</div>
+    <div class="domain">tirerack.com</div>
+    <div class="badges">
+      <span class="badge sale">Rebates</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Books -->
+  <article class="card" data-category="Books" data-scope="Selected"
+    data-name="Barnes & Noble" data-url="barnesandnoble.com"
+    data-badge="Buy 1 Get 1" data-off="Selected"
+    data-desc="BOGO on top paperbacks this week."
+    data-img="https://via.placeholder.com/300x300.png?text=B%26N">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=B%26N" alt="">
+    <div class="title">Barnes & Noble</div>
+    <div class="domain">barnesandnoble.com</div>
+    <div class="badges">
+      <span class="badge sale">B1G1</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Books" data-scope="Sitewide"
+    data-name="Book Depository" data-url="bookdepository.com"
+    data-badge="10% Off" data-off="Sitewide"
+    data-desc="Deals on bestsellers + free worldwide delivery."
+    data-img="https://via.placeholder.com/300x300.png?text=Book+Depo">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=BD" alt="">
+    <div class="title">Book Depository</div>
+    <div class="domain">bookdepository.com</div>
+    <div class="badges">
+      <span class="badge off">10% Off</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <!-- Kids -->
+  <article class="card" data-category="Kids" data-scope="Selected"
+    data-name="Carter's" data-url="carters.com"
+    data-badge="Doorbusters" data-off="Selected"
+    data-desc="Daily doorbusters on baby & kidswear."
+    data-img="https://via.placeholder.com/300x300.png?text=Carters">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=C" alt="">
+    <div class="title">Carter's</div>
+    <div class="domain">carters.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Health -->
+  <article class="card" data-category="Health" data-scope="Sitewide"
+    data-name="Walgreens" data-url="walgreens.com"
+    data-badge="Up to 25%" data-off="Sitewide"
+    data-desc="Weekly ad — vitamins & personal care."
+    data-img="https://via.placeholder.com/300x300.png?text=Walgreens">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=W" alt="">
+    <div class="title">Walgreens</div>
+    <div class="domain">walgreens.com</div>
+    <div class="badges">
+      <span class="badge off">Up to 25%</span><span class="badge scope">Sitewide</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Health" data-scope="Selected"
+    data-name="Boots" data-url="boots.com"
+    data-badge="3 for 2" data-off="Selected"
+    data-desc="Mix & match across health & beauty."
+    data-img="https://via.placeholder.com/300x300.png?text=Boots">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=BT" alt="">
+    <div class="title">Boots</div>
+    <div class="domain">boots.com</div>
+    <div class="badges">
+      <span class="badge sale">3 for 2</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Jewelry -->
+  <article class="card" data-category="Jewelry" data-scope="Selected"
+    data-name="Tiffany & Co." data-url="tiffany.com"
+    data-badge="Offer" data-off="Selected"
+    data-desc="Featured pieces & gifting picks."
+    data-img="https://via.placeholder.com/300x300.png?text=Tiffany">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=TIF" alt="">
+    <div class="title">Tiffany & Co.</div>
+    <div class="domain">tiffany.com</div>
+    <div class="badges">
+      <span class="badge sale">Offer</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <!-- Gaming -->
+  <article class="card" data-category="Gaming" data-scope="Selected"
+    data-name="Steam" data-url="store.steampowered.com"
+    data-badge="Summer Sale" data-off="Selected"
+    data-desc="Massive savings on thousands of PC games."
+    data-img="https://via.placeholder.com/300x300.png?text=Steam">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=STEAM" alt="">
+    <div class="title">Steam</div>
+    <div class="domain">store.steampowered.com</div>
+    <div class="badges">
+      <span class="badge sale">Sale</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+
+  <article class="card" data-category="Gaming" data-scope="Selected"
+    data-name="PlayStation Store" data-url="store.playstation.com"
+    data-badge="Deals" data-off="Selected"
+    data-desc="Weekly deals on PS5 & PS4 titles."
+    data-img="https://via.placeholder.com/300x300.png?text=PSN">
+    <img class="logo" src="https://via.placeholder.com/300x300.png?text=PS" alt="">
+    <div class="title">PlayStation Store</div>
+    <div class="domain">store.playstation.com</div>
+    <div class="badges">
+      <span class="badge sale">Deals</span><span class="badge scope">Selected</span>
+    </div>
+  </article>
+</main>
+
+<!-- ====== MODAL ====== -->
+<section id="modal" class="modal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="modal-close" aria-label="Close" onclick="closeModal()">✕</button>
+    <img id="m-img" class="modal-logo" src="" alt="">
+    <h2 id="m-title" class="modal-title"></h2>
+    <p id="m-sub" class="modal-sub"></p>
+
+    <div class="modal-badges">
+      <span id="m-badge" class="badge off"></span>
+      <span id="m-scope" class="badge scope"></span>
+    </div>
+
+    <p id="m-desc" class="modal-desc"></p>
+    <div class="checked">Checked by AI today</div>
+
+    <div class="actions">
+      <a id="m-link" href="#" target="_blank" rel="noopener">
+        <button class="btn btn-primary">Visit Store</button>
+      </a>
+      <button class="btn btn-ghost" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div>Can’t find your favourite shop? More stores are added daily.</div>
+</footer>
+
+<!-- ====== INTERACTIVITY (vanilla JS) ====== -->
+<script>
+/* ---------- Helpers ---------- */
+const $ = (q, root=document)=>root.querySelector(q);
+const $$ = (q, root=document)=>Array.from(root.querySelectorAll(q));
+
+/* ---------- Modal Logic ---------- */
+const modal = $("#modal");
+const mImg = $("#m-img");
+const mTitle = $("#m-title");
+const mSub = $("#m-sub");
+const mBadge = $("#m-badge");
+const mScope = $("#m-scope");
+const mDesc = $("#m-desc");
+const mLink = $("#m-link");
+
+function openModalFromCard(card){
+  mImg.src   = card.dataset.img || "https://via.placeholder.com/300x300.png?text=Store";
+  mTitle.textContent = card.dataset.name || "";
+  mSub.textContent   = card.dataset.url || "";
+  mBadge.textContent = card.dataset.badge || "Sale";
+  mScope.textContent = card.dataset.scope || "Selected";
+  mDesc.textContent  = card.dataset.desc || "";
+  const url = card.dataset.url || "#";
+  mLink.href = url.startsWith("http") ? url : `https://${url}`;
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden","false");
+}
+
+function closeModal(){
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden","true");
+}
+
+modal.addEventListener("click", (e)=>{ if(e.target === modal) closeModal(); });
+document.addEventListener("keydown", (e)=>{ if(e.key === "Escape") closeModal(); });
+
+/* ---------- Card Clicks ---------- */
+$$(".card").forEach(card=>{
+  card.addEventListener("click", ()=>openModalFromCard(card));
+});
+
+/* ---------- Category Filtering ---------- */
+const pills = $$("#categories .pill");
+const cards = $$(".card");
+
+function setActivePill(btn){
+  pills.forEach(p=>p.classList.remove("active"));
+  btn.classList.add("active");
+}
+
+function applyFilters(){
+  const active = $("#categories .pill.active");
+  const filter = active ? active.dataset.filter : "all";
+  const term = ($("#search").value || "").trim().toLowerCase();
+
+  cards.forEach(card=>{
+    const name = card.dataset.name.toLowerCase();
+    const url  = card.dataset.url.toLowerCase();
+    const cat  = card.dataset.category;
+    const scope = card.dataset.scope;
+
+    const matchesText = !term || name.includes(term) || url.includes(term) || cat.toLowerCase().includes(term);
+
+    let matchesFilter = true;
+    if(filter && filter !== "all"){
+      if(filter.startsWith("scope:")){
+        const s = filter.split(":")[1];
+        matchesFilter = scope === s;
+      } else {
+        matchesFilter = cat === filter;
+      }
+    }
+    card.style.display = (matchesText && matchesFilter) ? "" : "none";
+  });
+}
+
+pills.forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    setActivePill(btn);
+    applyFilters();
+  });
+});
+
+/* ---------- Search ---------- */
+$("#search").addEventListener("input", applyFilters);
+
+/* Initial render */
+applyFilters();
+
+  // Toggle menu
+document.getElementById("navToggle").addEventListener("click", () => {
+  document.getElementById("navLinks").classList.toggle("show");
+});
+
+</script>
+</body>
+</html>

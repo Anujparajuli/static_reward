@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Coupons – RewardSZN</title>
+<link rel="stylesheet" href="logged_in.css">
+</head>
+<body>
+<div class="container">
+
+  <!-- Nav -->
+<!-- Nav -->
+<div class="nav">
+  <div class="brand">
+    <div class="brand-badge">RZ</div>
+    <div>RewardSZN</div>
+  </div>
+
+  <!-- Hamburger (mobile only) -->
+  <button class="nav-toggle" id="navToggle">☰</button>
+
+  <div class="links" id="navLinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="coupons.html">Coupons</a>
+    <a href="20plusstore-tarcker.html">Store Tracker</a>
+    <a href="logged_in_giveaways.html">Giveaways</a>
+    <a href="settings.html">Settings</a>
+  </div>
+</div>
+
+
+  <!-- Header / Hero -->
+  <div class="header">
+    <h1>Coupons</h1>
+    <p>Find the best codes across Travel, Fashion, Beauty, Fitness, and more.</p>
+    <div class="meta">
+      <span class="pill">🎯 Curated daily</span>
+      <span class="pill">🤖 Checked by AI</span>
+      <span class="pill">⚡ Instant copy</span>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="search">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M21 21l-3.8-3.8M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="rgba(255,255,255,.8)" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="searchInput" type="text" placeholder="Search coupons, stores, or categories…"/>
+    </div>
+    <select id="sortSelect" class="select" aria-label="Sort">
+      <option value="latest">Sort: Latest</option>
+      <option value="discount">Sort: Highest Discount</option>
+      <option value="expiring">Sort: Expiring Soon</option>
+    </select>
+  </div>
+
+  <!-- Categories -->
+  <div class="categories" id="categories">
+    <button class="cat active" data-category="All">All</button>
+    <button class="cat" data-category="Travel">Travel</button>
+    <button class="cat" data-category="Fashion">Fashion</button>
+    <button class="cat" data-category="Beauty">Beauty</button>
+    <button class="cat" data-category="Fitness">Fitness</button>
+    <button class="cat" data-category="Home">Home</button>
+    <button class="cat" data-category="Pets">Pets</button>
+    <button class="cat" data-category="Food & Drink">Food & Drink</button>
+    <button class="cat" data-category="Electronics">Electronics</button>
+    <button class="cat" data-category="Books">Books</button>
+  </div>
+
+  <!-- Featured Row -->
+  <div class="featured">
+    <div class="f-card">
+      <div class="tagrow"><span class="badge hot">HOT</span><span class="badge">Travel</span></div>
+      <h3>Up to 30% Off Flights</h3>
+      <p>Selected routes this week only.</p>
+    </div>
+    <div class="f-card">
+      <div class="tagrow"><span class="badge hot">HOT</span><span class="badge">Fashion</span></div>
+      <h3>Extra 25% Outlet</h3>
+      <p>Stack with sitewide code at checkout.</p>
+    </div>
+    <div class="f-card">
+      <div class="tagrow"><span class="badge">Beauty</span></div>
+      <h3>Buy 1 Get 1 Free</h3>
+      <p>On select skincare bundles.</p>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div id="grid" class="grid">
+    <!-- Cards are injected by JS for easier filtering/sorting -->
+  </div>
+
+  <div id="empty" class="empty">No coupons match your filters yet. Try a different category or search.</div>
+
+  <!-- Footer -->
+  <div class="footer">© RewardSZN — Premium Coupons & Giveaways</div>
+</div>
+
+<script>
+/* ----------- Sample Data ----------- */
+const coupons = [
+  { id:1, title:"30% OFF Flights", store:"Singapore Airlines", code:"FLY30", discount:30, category:"Travel", expires:"2025-09-12", created:"2025-08-10" },
+  { id:2, title:"Extra 25% Outlet", store:"Nike", code:"OUTLET25", discount:25, category:"Fashion", expires:"2025-08-30", created:"2025-08-14" },
+  { id:3, title:"BOGO Skincare", store:"Sephora", code:"GLOWBOGO", discount:50, category:"Beauty", expires:"2025-08-22", created:"2025-08-12" },
+  { id:4, title:"15% Sitewide", store:"IKEA", code:"HOME15", discount:15, category:"Home", expires:"2025-09-01", created:"2025-08-05" },
+  { id:5, title:"Protein 20% OFF", store:"MyProtein", code:"GAIN20", discount:20, category:"Fitness", expires:"2025-08-25", created:"2025-08-11" },
+  { id:6, title:"25% Electronics", store:"Best Buy", code:"TECH25", discount:25, category:"Electronics", expires:"2025-08-28", created:"2025-08-13" },
+  { id:7, title:"Pets 18% OFF", store:"Petco", code:"PAWS18", discount:18, category:"Pets", expires:"2025-09-05", created:"2025-08-09" },
+  { id:8, title:"Books 10% OFF", store:"Booktopia", code:"READ10", discount:10, category:"Books", expires:"2025-10-01", created:"2025-08-01" },
+  { id:9, title:"Food 22% OFF", store:"DoorDash", code:"EAT22", discount:22, category:"Food & Drink", expires:"2025-08-24", created:"2025-08-12" },
+  { id:10, title:"Hotel $50 OFF", store:"Hotels.com", code:"STAY50", discount:18, category:"Travel", expires:"2025-09-10", created:"2025-08-07" },
+];
+
+/* ----------- Render ----------- */
+const grid = document.getElementById('grid');
+const emptyState = document.getElementById('empty');
+
+function daysLeft(dateStr){
+  const today = new Date();
+  const end = new Date(dateStr + "T23:59:59");
+  const ms = end - today;
+  return Math.ceil(ms / (1000*60*60*24));
+}
+
+function couponCard(c){
+  const exp = daysLeft(c.expires);
+  const urgency = exp <= 3 ? '🔥' : exp <= 7 ? '⏳' : '🗓️';
+  return `
+  <div class="card" data-category="${c.category}" data-discount="${c.discount}" data-created="${c.created}" data-expires="${c.expires}">
+    <div class="tagrow">
+      <span class="badge">${c.category}</span>
+      ${c.discount >= 30 ? `<span class="badge hot">HOT</span>` : ``}
+    </div>
+    <div class="title">
+      <h3>${c.title}</h3>
+      <span class="discount">${c.discount}%</span>
+    </div>
+    <div class="meta">
+      <span class="store">🏷️ ${c.store}</span>
+      <span class="expiry">${urgency} ${exp}d left</span>
+    </div>
+    <div class="codebar">
+      <span class="code">CODE: <strong>${c.code}</strong></span>
+      <button class="copy" data-code="${c.code}">Copy</button>
+    </div>
+  </div>`;
+}
+
+function render(list){
+  grid.innerHTML = list.map(couponCard).join('');
+  emptyState.style.display = list.length ? 'none' : 'flex';
+}
+
+/* initial */
+render(coupons);
+
+/* ----------- Filters ----------- */
+const categoryBar = document.getElementById('categories');
+let currentCategory = 'All';
+let currentSearch = '';
+let currentSort = 'latest';
+
+function applyFilters(){
+  let list = [...coupons];
+
+  // Category
+  if(currentCategory !== 'All'){
+    list = list.filter(c => c.category === currentCategory);
+  }
+  // Search
+  if(currentSearch.trim()){
+    const q = currentSearch.toLowerCase();
+    list = list.filter(c =>
+      c.title.toLowerCase().includes(q) ||
+      c.store.toLowerCase().includes(q) ||
+      c.category.toLowerCase().includes(q) ||
+      c.code.toLowerCase().includes(q)
+    );
+  }
+  // Sort
+  if(currentSort === 'discount'){
+    list.sort((a,b)=> b.discount - a.discount);
+  }else if(currentSort === 'expiring'){
+    list.sort((a,b)=> new Date(a.expires) - new Date(b.expires));
+  }else{
+    list.sort((a,b)=> new Date(b.created) - new Date(a.created)); // latest
+  }
+
+  render(list);
+}
+
+categoryBar.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.cat');
+  if(!btn) return;
+  document.querySelectorAll('.cat').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  currentCategory = btn.dataset.category;
+  applyFilters();
+});
+
+document.getElementById('searchInput').addEventListener('input', (e)=>{
+  currentSearch = e.target.value;
+  applyFilters();
+});
+
+document.getElementById('sortSelect').addEventListener('change', (e)=>{
+  currentSort = e.target.value;
+  applyFilters();
+});
+
+/* ----------- Copy-to-Clipboard ----------- */
+document.addEventListener('click', (e)=>{
+  const btn = e.target.closest('.copy');
+  if(!btn) return;
+  const code = btn.dataset.code;
+  navigator.clipboard.writeText(code).then(()=>{
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    setTimeout(()=> btn.textContent = original, 1200);
+  });
+});
+
+  // Toggle menu
+document.getElementById("navToggle").addEventListener("click", () => {
+  document.getElementById("navLinks").classList.toggle("show");
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Settings – RewardSZN Premium</title>
+<link rel="stylesheet" href="logged_in.css">
+
+      <!-- Nav -->
+  <!-- Nav -->
+<div class="nav">
+  <div class="brand">
+    <div class="brand-badge">RZ</div>
+    <div>RewardSZN</div>
+  </div>
+
+  <!-- Hamburger (mobile only) -->
+  <button class="nav-toggle" id="navToggle">☰</button>
+
+  <div class="links" id="navLinks">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="coupons.html">Coupons</a>
+    <a href="20plusstore-tarcker.html">Store Tracker</a>
+    <a href="logged_in_giveaways.html">Giveaways</a>
+    <a href="settings.html">Settings</a>
+  </div>
+</div>
+
+</head>
+<body>
+
+<div class="settings-container">
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Settings</h1>
+    <p>Manage your profile, preferences, and account</p>
+  </div>
+
+  <!-- Profile Section -->
+  <div class="card profile-section">
+    <div class="profile-img">S</div>
+    <div class="profile-info">
+      <h2>Soham Parajuli</h2>
+      <p>Premium Member</p>
+      <button>Edit Profile</button>
+      <a href="index.html" >Logout</a>
+    </div>
+  </div>
+
+
+  <!-- Account & Security -->
+  <div class="card">
+    <h3 class="section-title">Account & Security</h3>
+    <div class="form-group">
+      <label for="currentPassword">Current Password</label>
+      <input type="password" id="currentPassword" placeholder="Enter current password">
+    </div>
+    <div class="form-group">
+      <label for="newPassword">New Password</label>
+      <input type="password" id="newPassword" placeholder="Enter new password">
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm New Password</label>
+      <input type="password" id="confirmPassword" placeholder="Confirm new password">
+    </div>
+    <button class="btn">Save Password</button>
+
+    <div style="margin-top:20px;">
+      <div class="toggle-wrapper">
+        <span class="toggle-label">Email Notifications</span>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-wrapper">
+        <span class="toggle-label">SMS Alerts</span>
+        <label class="toggle-switch">
+          <input type="checkbox">
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="toggle-wrapper">
+        <span class="toggle-label">Push Notifications</span>
+        <label class="toggle-switch">
+          <input type="checkbox" checked>
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscription / Plan Management -->
+  <div class="card">
+    <h3 class="section-title">Subscription Plan</h3>
+    <p>You are currently on <strong>Premium Plan</strong></p>
+    <button class="btn">Upgrade Plan</button>
+  </div>
+
+  <!-- Payment / Billing History -->
+  <div class="card">
+    <h3 class="section-title">Billing History</h3>
+    <p>No recent transactions</p>
+    <button class="btn">View All Invoices</button>
+  </div>
+
+  <!-- Danger Zone -->
+  <div class="card danger-zone">
+    <h3 class="section-title">Danger Zone</h3>
+    <p>Deleting your account is permanent and cannot be undone.</p>
+    <button>Delete Account</button>
+  </div>
+
+</div>
+
+</body>
+<script src="main.js"></script>
+</html>
