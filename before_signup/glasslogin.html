@@ -1,0 +1,1007 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphism Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+:root{
+  --bg:#1A1A1A;             /* Background */
+  --card:#2A2A2A;           /* Card BG */
+  --text:#FFFFFF;           /* Primary text */
+  --muted:#CCCCCC;          /* Muted text */
+  --accent:#FFE66D;         /* Accent (yellow) */
+  --secondary:#F7FFF7;      /* Used sparingly */
+  --grad1:#FF6B6B;          /* Gradient start */
+  --grad2:#4ECDC4;          /* Gradient end */
+  --glass:rgba(255,255,255,0.06);
+  --border:rgba(255,255,255,0.1);
+  --shadow:0 10px 30px rgba(0,0,0,0.35);
+  --radius:20px;
+  --radius-lg:28px;
+  --radius-xl:36px;
+  --speed:320ms;
+}
+
+
+/* Neumorphism Login Form - Dark Theme with Your Color Palette */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card {
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    padding: 50px 40px;
+    box-shadow: 
+        12px 12px 30px rgba(0,0,0,0.5),
+        -8px -8px 20px rgba(255,255,255,0.05);
+    transition: all var(--speed) ease;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.neu-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: var(--card);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        8px 8px 20px rgba(0,0,0,0.6),
+        -8px -8px 20px rgba(255,255,255,0.05);
+    transition: all var(--speed) ease;
+    color: var(--accent);
+}
+
+.neu-icon:hover {
+    box-shadow: 
+        4px 4px 10px rgba(0,0,0,0.6),
+        -4px -4px 10px rgba(255,255,255,0.05),
+        inset 4px 4px 10px rgba(0,0,0,0.6),
+        inset -4px -4px 10px rgba(255,255,255,0.05);
+}
+
+.icon-inner {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-header h2 {
+    color: var(--text);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* Inputs */
+.form-group {
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.neu-input {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 
+        inset 6px 6px 12px rgba(0,0,0,0.6),
+        inset -6px -6px 12px rgba(255,255,255,0.05);
+    transition: all var(--speed) ease;
+}
+
+.neu-input:focus-within {
+    box-shadow: 
+        inset 4px 4px 8px rgba(0,0,0,0.7),
+        inset -4px -4px 8px rgba(255,255,255,0.05);
+}
+
+.neu-input input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 20px 24px;
+    padding-left: 55px;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+}
+
+.neu-input input::placeholder {
+    color: transparent;
+}
+
+.neu-input label {
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 16px;
+    transition: all var(--speed) ease;
+}
+
+.neu-input input:focus + label,
+.neu-input input:not(:placeholder-shown) + label {
+    top: 8px;
+    font-size: 12px;
+    color: var(--accent);
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--muted);
+    transition: all var(--speed) ease;
+}
+
+.neu-input:focus-within .input-icon {
+    color: var(--accent);
+}
+
+/* Password Toggle */
+.password-group {
+    padding-right: 50px;
+}
+
+.neu-toggle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--card);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    box-shadow: 
+        4px 4px 10px rgba(0,0,0,0.6),
+        -4px -4px 10px rgba(255,255,255,0.05);
+    transition: all var(--speed) ease;
+}
+
+.neu-toggle:hover {
+    color: var(--accent);
+}
+
+.neu-toggle:active {
+    box-shadow: 
+        inset 2px 2px 5px rgba(0,0,0,0.7),
+        inset -2px -2px 5px rgba(255,255,255,0.05);
+}
+
+.eye-closed {
+    display: none;
+}
+
+.neu-toggle.show-password .eye-open {
+    display: none;
+}
+
+.neu-toggle.show-password .eye-closed {
+    display: block;
+}
+
+/* Form Options */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.remember-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.remember-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.neu-checkbox {
+    width: 22px;
+    height: 22px;
+    background: var(--card);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        3px 3px 8px rgba(0,0,0,0.6),
+        -3px -3px 8px rgba(255,255,255,0.05);
+    transition: all var(--speed) ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.remember-wrapper input[type="checkbox"]:checked + .checkbox-label .neu-checkbox {
+    box-shadow: 
+        inset 2px 2px 5px rgba(0,0,0,0.7),
+        inset -2px -2px 5px rgba(255,255,255,0.05);
+}
+
+.neu-checkbox svg {
+    width: 14px;
+    height: 14px;
+    color: var(--accent);
+    opacity: 0;
+    transform: scale(0);
+    transition: all var(--speed) ease;
+}
+
+.remember-wrapper input[type="checkbox"]:checked + .checkbox-label .neu-checkbox svg {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.forgot-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color var(--speed) ease;
+}
+
+.forgot-link:hover {
+    color: var(--secondary);
+}
+
+/* Button */
+.neu-button {
+    width: 100%;
+    background: var(--card);
+    border: none;
+    border-radius: var(--radius);
+    padding: 18px 32px;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 
+        8px 8px 20px rgba(0,0,0,0.6),
+        -8px -8px 20px rgba(255,255,255,0.05);
+    transition: all var(--speed) ease;
+    overflow: hidden;
+}
+
+.neu-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    transition: left 0.5s ease;
+}
+
+.neu-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        12px 12px 30px rgba(0,0,0,0.7),
+        -12px -12px 30px rgba(255,255,255,0.05);
+}
+
+.neu-button:hover::before {
+    left: 100%;
+}
+
+.neu-button:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 4px 4px 10px rgba(0,0,0,0.7),
+        inset -4px -4px 10px rgba(255,255,255,0.05);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 1;
+    transition: opacity var(--speed) ease;
+}
+
+.btn-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity var(--speed) ease;
+}
+
+.neu-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--muted);
+    border-top: 3px solid var(--accent);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.neu-button.loading .btn-text {
+    opacity: 0;
+}
+
+.neu-button.loading .btn-loader {
+    opacity: 1;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    gap: 16px;
+}
+
+.divider-line {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--muted), transparent);
+}
+
+.divider span {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.neu-social {
+    width: 50px;
+    height: 50px;
+    background: var(--card);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    box-shadow: 
+        6px 6px 15px rgba(0,0,0,0.6),
+        -6px -6px 15px rgba(255,255,255,0.05);
+    transition: all var(--speed) ease;
+}
+
+.neu-social:hover {
+    transform: translateY(-2px);
+    color: var(--accent);
+    box-shadow: 
+        8px 8px 20px rgba(0,0,0,0.7),
+        -8px -8px 20px rgba(255,255,255,0.05);
+}
+
+.neu-social:active {
+    transform: translateY(0);
+    box-shadow: 
+        inset 3px 3px 8px rgba(0,0,0,0.7),
+        inset -3px -3px 8px rgba(255,255,255,0.05);
+}
+
+/* Signup Link */
+.signup-link {
+    text-align: center;
+}
+
+.signup-link p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--speed) ease;
+}
+
+.signup-link a:hover {
+    color: var(--secondary);
+}
+
+/* Error States */
+.error-message {
+    color: var(--grad1);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 8px;
+    margin-left: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all var(--speed) ease;
+}
+
+.error-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-group.error .neu-input {
+    box-shadow: 
+        inset 8px 8px 16px var(--grad1),
+        inset -8px -8px 16px rgba(255,255,255,0.05),
+        0 0 0 2px var(--grad1);
+}
+
+/* Success Message */
+.success-message {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.success-message.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.success-message .neu-icon {
+    background: var(--card);
+    color: var(--grad2);
+    margin-bottom: 20px;
+}
+
+.success-message h3 {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.success-message p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+    
+    .login-card {
+        padding: 35px 25px;
+        border-radius: var(--radius);
+    }
+    
+    .login-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .neu-input input {
+        padding: 18px 20px;
+        padding-left: 50px;
+    }
+    
+    .neu-input label {
+        left: 50px;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+/* Base button styles for both <a> and <button> */
+.neu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: #4CAF50; /* Adjust to your color */
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.neu-button:hover {
+    background-color: #45a049;
+}
+
+/* Loader wrapper inside the button */
+.btn-loader {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* Spinner animation */
+.neu-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Optional: Hide spinner by default (if desired) */
+/* .btn-loader {
+    display: none;
+} */
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                
+                <h2>Welcome back</h2>
+                <p>Please sign in to continue</p>
+            </div>
+            
+            <form class="login-form" id="loginForm" novalidate>
+                <div class="form-group">
+                    <div class="input-group neu-input">
+                        <input type="email" id="email" name="email"  placeholder=" ">
+                        <label for="email">Email address</label>
+                        <div class="input-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group neu-input password-group">
+                        <input type="password" id="password" name="password"  placeholder=" ">
+                        <label for="password">Password</label>
+                        <div class="input-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0110 0v4"/>
+                            </svg>
+                        </div>
+                        <!-- <button type="button" class="password-toggle neu-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                            <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                            <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                                <line x1="1" y1="1" x2="23" y2="23"/>
+                            </svg>
+                        </button> -->
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-wrapper">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember" class="checkbox-label">
+                            <div class="neu-checkbox">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            Remember me
+                        </label>
+                    </div>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <a href="/after_signup/dashboard.html" class="neu-button login-btn">
+                    <span class="btn-text">Sign In</span>
+                    <div class="btn-loader">
+                        <div class="neu-spinner"></div>
+                    </div>
+                </a>
+            </form>
+
+          
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <div class="success-icon neu-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <h3>Success!</h3>
+                <p>Redirecting to your dashboard...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../shared/js/form-utils.js"></script>
+    <!-- <script >
+
+        // Neumorphism Login Form JavaScript
+        class NeumorphismLoginForm {
+            constructor() {
+                this.form = document.getElementById('loginForm');
+                this.emailInput = document.getElementById('email');
+                this.passwordInput = document.getElementById('password');
+                this.passwordToggle = document.getElementById('passwordToggle');
+                this.submitButton = this.form.querySelector('.login-btn');
+                this.successMessage = document.getElementById('successMessage');
+                this.socialButtons = document.querySelectorAll('.neu-social');
+                
+                this.init();
+            }
+            
+            init() {
+                this.bindEvents();
+                this.setupPasswordToggle();
+                this.setupSocialButtons();
+                this.setupNeumorphicEffects();
+            }
+            
+            bindEvents() {
+                this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+                this.emailInput.addEventListener('blur', () => this.validateEmail());
+                this.passwordInput.addEventListener('blur', () => this.validatePassword());
+                this.emailInput.addEventListener('input', () => this.clearError('email'));
+                this.passwordInput.addEventListener('input', () => this.clearError('password'));
+                
+                // Add soft press effects to inputs
+                [this.emailInput, this.passwordInput].forEach(input => {
+                    input.addEventListener('focus', (e) => this.addSoftPress(e));
+                    input.addEventListener('blur', (e) => this.removeSoftPress(e));
+                });
+            }
+            
+            setupPasswordToggle() {
+                this.passwordToggle.addEventListener('click', () => {
+                    const type = this.passwordInput.type === 'password' ? 'text' : 'password';
+                    this.passwordInput.type = type;
+                    
+                    this.passwordToggle.classList.toggle('show-password', type === 'text');
+                    
+                    // Add soft click animation
+                    this.animateSoftPress(this.passwordToggle);
+                });
+            }
+            
+            setupSocialButtons() {
+                this.socialButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        this.animateSoftPress(button);
+                        
+                        // Determine which social platform based on SVG content
+                        const svgPath = button.querySelector('svg path').getAttribute('d');
+                        let provider = 'Social';
+                        if (svgPath.includes('22.56')) provider = 'Google';
+                        else if (svgPath.includes('github')) provider = 'GitHub';
+                        else if (svgPath.includes('23.953')) provider = 'Twitter';
+                        
+                        this.handleSocialLogin(provider, button);
+                    });
+                });
+            }
+            
+            // setupNeumorphicEffects() {
+            //     // Add hover effects to all neumorphic elements
+            //     const neuElements = document.querySelectorAll('.neu-icon, .neu-checkbox, .neu-social');
+            //     neuElements.forEach(element => {
+            //         element.addEventListener('mouseenter', () => {
+            //             element.style.transform = 'scale(1.05)';
+            //         });
+                    
+            //         element.addEventListener('mouseleave', () => {
+            //             element.style.transform = 'scale(1)';
+            //         });
+            //     });
+                
+            //     // Add ambient light effect on mouse move
+            //     document.addEventListener('mousemove', (e) => {
+            //         this.updateAmbientLight(e);
+            //     });
+            // }
+            
+            // updateAmbientLight(e) {
+            //     const card = document.querySelector('.login-card');
+            //     const rect = card.getBoundingClientRect();
+            //     const x = e.clientX - rect.left;
+            //     const y = e.clientY - rect.top;
+                
+            //     const centerX = rect.width / 2;
+            //     const centerY = rect.height / 2;
+                
+            //     const angleX = (x - centerX) / centerX;
+            //     const angleY = (y - centerY) / centerY;
+                
+            //     const shadowX = angleX * 30;
+            //     const shadowY = angleY * 30;
+                
+            //     card.style.boxShadow = `
+            //         ${shadowX}px ${shadowY}px 60px #bec3cf,
+            //         ${-shadowX}px ${-shadowY}px 60px #ffffff
+            //     `;
+            // }
+            
+            // addSoftPress(e) {
+            //     const inputGroup = e.target.closest('.neu-input');
+            //     inputGroup.style.transform = 'scale(0.98)';
+            // }
+            
+            // removeSoftPress(e) {
+            //     const inputGroup = e.target.closest('.neu-input');
+            //     inputGroup.style.transform = 'scale(1)';
+            // }
+            
+            // animateSoftPress(element) {
+            //     element.style.transform = 'scale(0.95)';
+            //     setTimeout(() => {
+            //         element.style.transform = 'scale(1)';
+            //     }, 150);
+            // }
+            
+            validateEmail() {
+                const email = this.emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (!email) {
+                    this.showError('email', 'Email is required');
+                    return false;
+                }
+                
+                if (!emailRegex.test(email)) {
+                    this.showError('email', 'Please enter a valid email');
+                    return false;
+                }
+                
+                this.clearError('email');
+                return true;
+            }
+            
+            validatePassword() {
+                const password = this.passwordInput.value;
+                
+                if (!password) {
+                    this.showError('password', 'Password is required');
+                    return false;
+                }
+                
+                if (password.length < 6) {
+                    this.showError('password', 'Password must be at least 6 characters');
+                    return false;
+                }
+                
+                this.clearError('password');
+                return true;
+            }
+            
+            showError(field, message) {
+                const formGroup = document.getElementById(field).closest('.form-group');
+                const errorElement = document.getElementById(`${field}Error`);
+                
+                formGroup.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+                
+                // Add gentle shake animation
+                const input = document.getElementById(field);
+                input.style.animation = 'gentleShake 0.5s ease-in-out';
+                setTimeout(() => {
+                    input.style.animation = '';
+                }, 500);
+            }
+            
+            clearError(field) {
+                const formGroup = document.getElementById(field).closest('.form-group');
+                const errorElement = document.getElementById(`${field}Error`);
+                
+                formGroup.classList.remove('error');
+                errorElement.classList.remove('show');
+                setTimeout(() => {
+                    errorElement.textContent = '';
+                }, 300);
+            }
+            
+            async handleSubmit(e) {
+                e.preventDefault();
+                
+                const isEmailValid = this.validateEmail();
+                const isPasswordValid = this.validatePassword();
+                
+                if (!isEmailValid || !isPasswordValid) {
+                    this.animateSoftPress(this.submitButton);
+                    return;
+                }
+                
+                this.setLoading(true);
+                
+                try {
+                    // Simulate soft authentication
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                    
+                    // Show neumorphic success
+                    this.showNeumorphicSuccess();
+                } catch (error) {
+                    this.showError('password', 'Login failed. Please try again.');
+                } finally {
+                    this.setLoading(false);
+                }
+            }
+            
+            async handleSocialLogin(provider, button) {
+                console.log(`Initiating ${provider} login...`);
+                
+                // Add loading state to button
+                button.style.pointerEvents = 'none';
+                button.style.opacity = '0.7';
+                
+                try {
+                    await new Promise(resolve => setTimeout(resolve, 1500));
+                    console.log(`Redirecting to ${provider} authentication...`);
+                    // window.location.href = `/auth/${provider.toLowerCase()}`;
+                } catch (error) {
+                    console.error(`${provider} authentication failed: ${error.message}`);
+                } finally {
+                    button.style.pointerEvents = 'auto';
+                    button.style.opacity = '1';
+                }
+            }
+            
+            setLoading(loading) {
+                this.submitButton.classList.toggle('loading', loading);
+                this.submitButton.disabled = loading;
+                
+                // Disable social buttons during login
+                this.socialButtons.forEach(button => {
+                    button.style.pointerEvents = loading ? 'none' : 'auto';
+                    button.style.opacity = loading ? '0.6' : '1';
+                });
+            }
+            
+            showNeumorphicSuccess() {
+                // Soft fade out form
+                this.form.style.transform = 'scale(0.95)';
+                this.form.style.opacity = '0';
+                
+                setTimeout(() => {
+                    this.form.style.display = 'none';
+                    document.querySelector('.social-login').style.display = 'none';
+                    document.querySelector('.signup-link').style.display = 'none';
+                    
+                    // Show success with soft animation
+                    this.successMessage.classList.add('show');
+                    
+                    // Animate success icon
+                    const successIcon = this.successMessage.querySelector('.neu-icon');
+                    successIcon.style.animation = 'successPulse 0.6s ease-out';
+                    
+                }, 300);
+                
+                // Simulate redirect
+                setTimeout(() => {
+                    console.log('Redirecting to dashboard...');
+                    // window.location.href = '/dashboard';
+                }, 2500);
+            }
+        }
+
+        // Add custom animations
+        if (!document.querySelector('#neu-keyframes')) {
+            const style = document.createElement('style');
+            style.id = 'neu-keyframes';
+            style.textContent = `
+                @keyframes gentleShake {
+                    0%, 100% { transform: translateX(0); }
+                    25% { transform: translateX(-3px); }
+                    75% { transform: translateX(3px); }
+                }
+                
+                @keyframes successPulse {
+                    0% { transform: scale(0.8); opacity: 0; }
+                    50% { transform: scale(1.1); }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        // Initialize the form when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new NeumorphismLoginForm();
+        });
+    </script> -->
+</body>
+</html>
+

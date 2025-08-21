@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RewardSZN — Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header class="header">
+<div class="container nav">
+      <a class="logo" href="index.html" aria-label="Rewards home">
+        <span class="mark"><i class="spark"></i></span>
+        <span>Reward<span class="gradient-text">SZN</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="giveaways.html">Giveaways</a>
+        <a href="about.html">About Us</a>
+        <a href="partner.html">Partner</a>
+        <a class="cta" href="glasslogin.html">Join Now</a>
+      </nav>
+      <button class="mobile-toggle" data-toggle="nav" aria-label="Toggle menu">
+        <!-- burger -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" style="min-height:46vh">
+    <div class="backdrop"></div>
+    <div class="container hero-wrap" style="padding:50px 0">
+      <h1>Memberships that <span class="gradient-text">pay for themselves</span></h1>
+      <p class="lead">Choose a plan to unlock premium deals and weekly giveaway entries.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="container">
+      <!-- Pricing Toggle (visual only) -->
+      <div class="pricing-toggle">
+        <div class="switch" role="group" aria-label="Billing period toggle" data-index="1">
+          <span><em>Weekly</em><em>Monthly</em><em>Yearly</em></span>
+          <i class="knob" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="grid price-cards">
+        <article class="price card glow">
+          <h3>Basic</h3>
+          <p class="muted">Start saving today</p>
+          <div class="amount gradient-text">$0</div>
+          <ul class="checks">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> Access to weekly deals</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> 1 giveaway entry / week</li>
+            <li class="muted"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 12h12" stroke="currentColor" stroke-width="2"/></svg> Priority support</li>
+          </ul>
+          <div style="margin-top:16px"><a class="btn primary">Get Started</a></div>
+        </article>
+
+        <article class="price card glow" style="transform:translateY(-6px)">
+          <span class="popular badge">Most Popular</span>
+          <h3>Premium</h3>
+          <p class="muted">Best for power savers</p>
+          <div class="amount gradient-text">$9<span style="font-size:18px">/mo</span></div>
+          <ul class="checks">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> All Basic features</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> 5 giveaway entries / week</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> VIP-only deals</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> Early access drops</li>
+          </ul>
+          <div style="margin-top:16px"><a class="btn primary">Upgrade</a></div>
+        </article>
+
+        <article class="price card glow">
+          <h3>VIP</h3>
+          <p class="muted">Max benefits + prestige</p>
+          <div class="amount gradient-text">$19<span style="font-size:18px">/mo</span></div>
+          <ul class="checks">
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> All Premium features</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> 12 entries / week</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> Concierge support</li>
+            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="currentColor" stroke-width="2"/></svg> VIP-only drops</li>
+          </ul>
+          <div style="margin-top:16px"><a class="btn primary">Go VIP</a></div>
+        </article>
+      </div>
+
+      <!-- Comparison (optional) -->
+      <div class="section" style="padding-top:34px">
+        <div class="table card">
+          <table aria-label="Plan comparison">
+            <thead>
+              <tr><th>Feature</th><th>Basic</th><th>Premium</th><th>VIP</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Weekly deals</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Giveaway entries</td><td>1</td><td>5</td><td>12</td></tr>
+              <tr><td>Early access</td><td>—</td><td>Yes</td><td>Yes</td></tr>
+              <tr><td>Concierge</td><td>—</td><td>—</td><td>Yes</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <section class="section faq">
+        <div class="section-head">
+          <h2>FAQs</h2>
+          <p class="muted">Quick answers to common questions.</p>
+        </div>
+        <details class="card">
+          <summary>Can I cancel anytime? <span class="arrow">▼</span></summary>
+          <div class="content">Yes, this MVP is visual only. In production, you’ll manage billing in your account.</div>
+        </details>
+        <details class="card">
+          <summary>How do giveaways work? <span class="arrow">▼</span></summary>
+          <div class="content">Enter weekly, track countdowns, and we’ll display winners publicly.</div>
+        </details>
+        <details class="card">
+          <summary>Do plans include exclusive deals? <span class="arrow">▼</span></summary>
+          <div class="content">Premium & VIP unlock special drops and extra entries.</div>
+        </details>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="section">
+        <div class="card" style="text-align:center;padding:38px">
+          <h2>Start Saving and Winning Today!</h2>
+          <p class="muted">Pick your plan and get bonus entries as a founder.</p>
+          <div style="margin-top:12px"><a class="btn-ring btn primary">Join Now</a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a class="logo" href="index.html"><span class="mark"><i class="spark"></i></span><span>Reward<span class="gradient-text">SZN</span></span></a></div>
+      <div><b>Links</b><ul style="list-style:none;padding:0;margin-top:8px"><li><a href="deals.html">Deals</a></li><li><a href="giveaways.html">Giveaways</a></li></ul></div>
+      <div><b>Legal</b><ul style="list-style:none;padding:0;margin-top:8px"><li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li></ul></div>
+      <div><b>Contact</b><ul style="list-style:none;padding:0;margin-top:8px"><li><a href="#">support@rewardszn.example</a></li></ul></div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <script src="main.js" defer></script>
+</body>
+</html>

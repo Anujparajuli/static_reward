@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rewards MVP — Unlock Exclusive Rewards</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css" />
+  <meta name="description" content="Join thousands of savvy members earning cash, prizes, and discounts every week." />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="index.html" aria-label="Rewards home">
+        <span class="mark"><i class="spark"></i></span>
+        <span>Reward<span class="gradient-text">SZN</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="giveaways.html">Giveaways</a>
+        <a href="about.html">About Us</a>
+        <a href="partner.html">Partner</a>
+        <a class="cta" href="glasslogin.html">Join Now</a>
+      </nav>
+      <button class="mobile-toggle" data-toggle="nav" aria-label="Toggle menu">
+        <!-- burger -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="backdrop"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="container hero-wrap">
+      <span class="badge">Weekly Prizes · Exclusive Deals · VIP Giveaways</span>
+      <h1><span class="gradient-text">Unlock Exclusive Rewards.</span> Save More. Win Weekly.</h1>
+      <p class="lead">Join thousands of savvy members earning cash, prizes, and discounts from top brands — all in one premium experience.</p>
+      <div class="hero-actions">
+        <a class="btn primary glow" href="pricing.html">Join Now</a>
+        <!-- <a class="btn outline" href="#features">How It Works <span class="kbd">/learn</span></a> -->
+        <a class="btn outline" href="#features">How It Works </a>
+
+      </div>
+
+      <!-- Live Giveaway mini -->
+      <div class="giveaway">
+        <article class="give-card card">
+          <div class="section-head">
+            <h3>Live Giveaway</h3>
+            <span class="badge">Ends Soon</span>
+          </div>
+
+          <div class="countdown" data-countdown>
+            <div class="count"><small>Days</small><b data-part="d">00</b></div>
+            <div class="count"><small>Hrs</small><b data-part="h">00</b></div>
+            <div class="count"><small>Min</small><b data-part="m">00</b></div>
+            <div class="count"><small>Sec</small><b data-part="s">00</b></div>
+          </div>
+
+          <p class="muted">Win a premium shopping spree + exclusive merch pack.</p>
+          <div class="progress" aria-label="Entries filled">
+            <i></i>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn-ring btn primary" href="giveaways.html">Enter Giveaway</a>
+            <a class="btn" href="giveaways.html#rules">Rules</a>
+          </div>
+        </article>
+
+        <aside class="card">
+          <h3>What you can win</h3>
+          <ul class="checks">
+            <li>
+              <!-- gift icon -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8m16 0H4m16 0V8a2 2 0 0 0-2-2h-4m-8 6V8a2 2 0 0 1 2-2h4m0 0C8 6 8 2 10.5 2S13 6 12 6m0 0c2 0 2-4 4.5-4S16 6 12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              $500 shopping credit
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3v18m-7-7h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Exclusive brand bundle
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 17l-5 3 1-5-4-4 5-.7L12 5l3 4.3 5 .7-4 4 1 5z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              VIP membership trial
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Everything you need to <span class="gradient-text">save & win</span></h2>
+      </div>
+
+      <div class="grid features">
+        <article class="feature card glow">
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18" stroke="black" stroke-opacity=".8" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Track Deals</h3>
+          <p class="muted">Follow the hottest discounts with animated badges and quick views.</p>
+        </article>
+
+        <article class="feature card glow">
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12l6 6L20 6" stroke="black" stroke-opacity=".8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Win Giveaways</h3>
+          <p class="muted">Enter weekly prizes—see countdowns, entries, and winner highlights.</p>
+        </article>
+
+        <article class="feature card glow">
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 5v14m-7-7h14" stroke="black" stroke-opacity=".8" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Earn Referrals</h3>
+          <p class="muted">Invite friends with your unique link and unlock exclusive perks.</p>
+        </article>
+
+        <article class="feature card glow">
+          <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 7h18M7 7v10m10-10v10M3 17h18" stroke="black" stroke-opacity=".8" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Personal Dashboard</h3>
+          <p class="muted">A clean, minimal layout ready for a future dynamic upgrade.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deal Highlights -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Top <span class="gradient-text">Deals</span> of the Week</h2>
+        <a class="btn" href="deals.html">Browse All</a>
+      </div>
+      <div class="grid deals">
+        <article class="deal glow">
+          <span class="badge type">20% OFF</span>
+          <img src="assets/images/deal-1.jpg" alt="Sneaker brand discount" loading="lazy" />
+          <div class="overlay"><a class="btn primary" href="deals.html">Quick View</a></div>
+          <div class="meta">
+            <h3>Hype Kicks Exclusive</h3>
+            <p class="muted">Members get early-access pricing on limited drops.</p>
+          </div>
+        </article>
+        <article class="deal glow">
+          <span class="badge type">Exclusive</span>
+          <img src="assets/images/deal-2.jpg" alt="Electronics deal" loading="lazy" />
+          <div class="overlay"><a class="btn primary" href="deals.html">Quick View</a></div>
+          <div class="meta">
+            <h3>Noise-Cancel Pro</h3>
+            <p class="muted">Premium headphones with stacked member benefits.</p>
+          </div>
+        </article>
+        <article class="deal glow">
+          <span class="badge type">Flash</span>
+          <img src="assets/images/deal-3.jpg" alt="Grocery gift card" loading="lazy" />
+          <div class="overlay"><a class="btn primary" href="deals.html">Quick View</a></div>
+          <div class="meta">
+            <h3>Grocer Gift Boost</h3>
+            <p class="muted">$100 gift card — limited to the first 500 members.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="section">
+    <div class="container grid stats">
+      <div class="stat card">
+        <b class="gradient-text">$1.2M+</b>
+        <small>Total Cash & Prizes</small>
+      </div>
+      <div class="stat card">
+        <b class="gradient-text">84K+</b>
+        <small>Members</small>
+      </div>
+      <div class="stat card">
+        <b class="gradient-text">320+</b>
+        <small>Partner Brands</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Wall of <span class="gradient-text">Love</span></h2>
+      </div>
+      <div class="marquee card">
+        <div class="ticker">
+          <!-- repeat twice for seamless loop -->
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Sofia R.</b></div>
+            <p>"Already won my first gift card. Site feels premium."</p>
+          </article>
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Dev M.</b></div>
+            <p>"The dark UI and micro-animations are 🔥"</p>
+          </article>
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Ana L.</b></div>
+            <p>"Weekly giveaways keep me checking back."</p>
+          </article>
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Ken P.</b></div>
+            <p>"Love the quick-view on deals, super smooth."</p>
+          </article>
+
+          <!-- loop again -->
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Sofia R.</b></div>
+            <p>"Already won my first gift card. Site feels premium."</p>
+          </article>
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Dev M.</b></div>
+            <p>"The dark UI and micro-animations are 🔥"</p>
+          </article>
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Ana L.</b></div>
+            <p>"Weekly giveaways keep me checking back."</p>
+          </article>
+          <article class="testi card glow">
+            <div class="row"><span class="avatar"></span><b>Ken P.</b></div>
+            <p>"Love the quick-view on deals, super smooth."</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="section">
+    <div class="container card">
+      <div class="grid news">
+        <div>
+          <h2>Get <span class="gradient-text">early access</span> to drops</h2>
+          <p class="muted">No spam. Only the best deals and giveaways, every week.</p>
+        </div>
+        <form class="grid" action="#" onsubmit="return false" aria-label="Newsletter signup">
+          <label class="input">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            <input type="email" placeholder="Enter your email" aria-label="Email" required />
+          </label>
+          <button class="btn-ring btn primary">Subscribe</button>
+        </form>
+      </div>
+      <div class="ribbon" style="margin-top:14px">Limited Time: Founders get a bonus entry every week ✨</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="index.html"><span class="mark"><i class="spark"></i></span><span>Reward<span class="gradient-text">SZN</span></span></a>
+        <div class="social" aria-label="Social links">
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.778-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.874h2.773l-.443 2.89h-2.33v6.989C18.343 21.128 22 16.991 22 12z" fill="currentColor"/></svg></a>
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 20s9-5 9-11a5 5 0 0 0-9-3" stroke="currentColor" stroke-width="2" fill="none"/></svg></a>
+          <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="2"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <b>Links</b>
+        <ul style="padding:0;list-style:none;margin:8px 0 0">
+          <li><a href="deals.html">Deals</a></li>
+          <li><a href="giveaways.html">Giveaways</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Legal</b>
+        <ul style="padding:0;list-style:none;margin:8px 0 0">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <b>Contact</b>
+        <ul style="padding:0;list-style:none;margin:8px 0 0">
+          <li><a href="#">support@rewardszn.example</a></li>
+          <li><a href="#">+1 555 0199</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
